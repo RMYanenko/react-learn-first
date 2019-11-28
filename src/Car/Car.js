@@ -1,9 +1,17 @@
-import React from 'react';
+import React from "react";
 
 export default props => (
-    <div>
-        <h3>Car name: {props.name}</h3>
-        <p>Yaer: {props.year}</p>
-        <button onClick={props.onChangeTitle}>Click</button>   
-    </div>
-)
+  <div
+    style={{
+      border: "1px solid #ccc",
+      marginBottom: "10px",
+      display: "block",
+      padding: "10px"
+    }}
+  >
+    <h3>Car name: {props.name}</h3>
+    <p>Yaer: {props.year}</p>
+    <input type="text" onChange={props.onChangeName} value={props.name} />
+    <button onClick={props.onDelete}>Delete</button>
+  </div>
+);
