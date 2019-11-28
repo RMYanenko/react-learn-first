@@ -39,8 +39,6 @@ class App extends Component {
       textAlign: "center"
     };
 
-    // const cars = this.state.cars;
-
     let cars = null;
 
     if (this.state.showCars) {
@@ -62,7 +60,15 @@ class App extends Component {
 
         <button onClick={this.toggleCarsHandler}>Toggle cars</button>
 
-        {cars}
+        <div
+          style={{
+            width: 400,
+            margin: "auto",
+            paddingTop: "5px"
+          }}
+        >
+          {cars}
+        </div>
       </div>
     );
   }
